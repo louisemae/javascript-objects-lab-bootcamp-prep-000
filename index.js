@@ -9,7 +9,7 @@ function destructivelyUpdateObjectWithKeyAndValue(object, key, value) {
 }
 
 function deleteFromObjectByKey(object, key) {
-  var objectCopy = object;
+  var objectCopy = Object.assign({}, object);
   delete objectCopy[key];
   return objectCopy;
 }
